@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+}
+
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* transition-duration: 2s;
+    transition-property: all; */
+    /* transition-timing-function: ease-in-out; */
+    /* transition-delay: 2s; */
+
+    
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    /* animation-name: single-color; */
+    animation-name: multiple-colors;
+    animation-duration: 2s;
+    /* animation-timing-function: ease-in-out; */
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+
+    position: absolute;
+}
+
+@keyframes single-color {
+    from {
+        background-color: #a855f7;
+    }
+
+    to {
+        background-color: #ec4899;
+        transform: translate(30px, 50px);
+    }
+}
+
+@keyframes multiple-colors {
+    0% {
+        background-color: #ec4899;
+        right: 100%;
+    }
+
+    25% {
+        background-color: #5e44cf;
+    }
+
+    50% {
+        background-color: #2dcfba;
+    }
+
+    75% {
+        background-color: #b7e62a;
+    }
+
+    100% {
+        background-color: #a855f7;
+        /* transform: translate(30px, 50px); */
+        right: 0%;
+    }
+}
+
+/* .container:hover > div {
+    width: 60vw;
+    background-color: #ec4899;
+}
+
+.linear {
+    transition-timing-function: linear;
+    background-color: rgb(227, 186, 75);
+}
+
+.ease {
+    transition-timing-function: ease;
+    background-color: rgb(75, 227, 169);
+}
+
+.ease-in {
+    transition-timing-function: ease-in;
+    background-color: rgb(75, 136, 227);
+}
+
+.ease-out {
+    transition-timing-function: ease-out;
+    background-color: rgb(194, 75, 227);
+}
+
+.ease-in-out {
+    transition-timing-function: ease-in-out;
+    background-color: rgb(227, 75, 75);
+} */
+
+.btn {
+    background-color: aqua;
+    margin: 50px;
+    padding: 20px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    /* transition: 1s all ease; */
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    animation-name: btn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0s;
+
+}
+
+/* .btn:hover {
+    transform: translate(0, -5px) scale(1.1) rotate(180deg) skew(10deg);
+    box-shadow: 0 0 100px plum;
+} */
+
+@keyframes btn {
+    from {
+        /* transform: rotate(0deg); */
+        /* transform: scale(1); */
+    }
+    to {
+        /* transform: scale(1.2); */
+        transform: rotate(360deg);
+    }
+}
